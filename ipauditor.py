@@ -3,7 +3,6 @@ import json
 
 status = ["[ALTO RIESGO]","[RIESGO MODERADO]","[BAJO RIESGO]"]
 
-# Definimos colores para la salida
 class Colors:
     RESET = "\033[0m"
     WHITE = "\033[97m"
@@ -94,10 +93,10 @@ if __name__ == "__main__":
     ip_to_check = input("Introduce la IP a analizar: ")
     save = input("¿Deseas guardar el informe? (y/n): ").strip().lower()
 
-    # Inserta tus API KEYS aquí (si las tienes)
-    IPINFO_TOKEN = ""  # Opcional
-    ABUSEIPDB_KEY = "" # Opcional (gratis registrándose)
-    IPQS_KEY = ""      # Opcional (gratis registrándose)
+    
+    IPINFO_TOKEN = ""  
+    ABUSEIPDB_KEY = "" 
+    IPQS_KEY = ""      
 
     save_report = True if save == "y" else False
     show_info(ip_to_check, IPINFO_TOKEN, ABUSEIPDB_KEY, IPQS_KEY, save_report)
